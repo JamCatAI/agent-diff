@@ -2,6 +2,13 @@
 """agent-diff — run any task on two LLMs and let Claude diff the results."""
 import argparse
 import os
+
+# auto-load .env if present
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 import sys
 import threading
 
